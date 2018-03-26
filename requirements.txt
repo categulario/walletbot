@@ -1,3 +1,4 @@
 Flask==0.12.2
 -e .
 pymongo==3.6.1
+Fabric3==1.14.post1
