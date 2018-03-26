@@ -1,5 +1,5 @@
 pidfile        = '/run/gunicorn/walletbot.pid'
-bind           = ['0.0.0.0:5000']
+bind           = ['127.0.0.1:9100']
 user           = 'root'
 group          = 'root'
 accesslog      = '/var/log/gunicorn/walletbot.access.log'
