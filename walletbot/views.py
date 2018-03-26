@@ -1,7 +1,7 @@
 from flask import jsonify, request
 from walletbot import app
-import json
 from walletbot.mongo import client
+import json
 
 
 @app.route('/')
