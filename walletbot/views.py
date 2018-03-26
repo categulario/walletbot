@@ -1,6 +1,7 @@
 from flask import jsonify, request
 from walletbot import app
 import json
+from walletbot.mongo import client
 
 
 @app.route('/')
@@ -21,7 +22,7 @@ def telegram_webhook(token):
     raw_body = request.get_data()
     update = json.loads(raw_body)
 
-    print(update)
+    query = client.messages.insert_one(update)
 
     return jsonify({
         'message': 'ok'
