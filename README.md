@@ -14,3 +14,20 @@ $ source .env/bin/activate
 $ pip install -r requirements.txt
 $ flask run
 ```
+
+## Deploy
+
+Add the following lines at the end of your .env/bin/activate with your own production server information
+
+```
+export SERVER_HOST=<server_host>
+export SERVER_USER=<server_user>
+export SERVER_PASSWORD=<server_password>
+export SERVER_PATH=<server_path>
+```
+
+Then run
+
+```
+fab deploy
+```
