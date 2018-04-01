@@ -17,7 +17,7 @@ def telegram_webhook(token):
             'ok': False,
             'error_code': 400,
             'description': 'Bad Request: wrong telegram auth token',
-        })
+        }), 400
 
     raw_body = request.get_data()
     update = json.loads(raw_body)
